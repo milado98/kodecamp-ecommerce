@@ -5,6 +5,8 @@ import Cart from "./components/Cart";
 import Products from "./pages/Products";
 import { ShopContextProvider } from "./context/shopContext";
 import SingleProduct from "./pages/SingleProducts";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
 
 function App() {
   return (
@@ -16,6 +18,10 @@ function App() {
             <Route path="/" element={<Products />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/products/:id" element={<SingleProduct />} />
+          </Routes>
+          <Routes>
+            <Route path="/login" element={<SignIn />} />
+            <Route path="/register" element={<SignUp />} />
           </Routes>
         </Router>
       </ShopContextProvider>

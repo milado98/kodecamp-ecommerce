@@ -15,9 +15,24 @@ const Navbar = () => {
             <p className="text-black font-bold">ECOM</p>
         </div>
       </div>
-      <div className="links mr-2 md:mr-4 lg:mr-6">
+      <div className="flex gap-4 items-center links mr-2 md:mr-4 lg:mr-6">
         <Link to="/cart">
           <FiShoppingCart size={32} />
+        </Link>
+        <Link to="/login">
+          <button
+            className="h-[40px] flex items-center font-semibold p-3 rounded-lg border border-black"
+            onClick={() => navigate("/login")}
+          >
+            Login
+          </button>
+        </Link>
+        <Link to="/register">
+          <button
+            className="h-[40px] flex items-center font-semibold p-3 rounded-lg border border-black bg-black text-gray-300"
+          >
+            Register
+          </button>
         </Link>
       </div>
     </div>
